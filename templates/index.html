@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if request.method == 'GET' %}
+
+<form name="age" action={{url_for('predict') }} method="POST">
+
+	<input type="integer" name="experience" /> experience de la victime
+	<input type="submit" value="découvre combien ça gagne">
+</form>
+
+{% else%}
+
+<div>
+  <span>
+ <!--   {{experience}} -->
+    Selon ma boule de cristal il ou elle est payée {{salaire}} euros.
+    </span>
+</div>
+</div>
+
+{% endif%}
+
+{% endblock %}
